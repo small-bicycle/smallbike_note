@@ -14,7 +14,6 @@ from urllib import parse
 from fake_useragent import UserAgent
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-
 headers = {
     "Upgrade-Insecure-Requests": "1",
     "User-Agent": UserAgent.random,
@@ -81,7 +80,7 @@ if __name__ == '__main__':
         "文件名": ['ts链接'],
 
     }
-    for direc, ts_url_list in config.all_download.items():
+    for direc, ts_url_list in all_download.items():
         ts_path = os.getcwd() + "/ts_download" + "/" + direc
         print(f'ts_path : {ts_path}')
         if not os.path.exists(ts_path):
